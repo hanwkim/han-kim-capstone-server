@@ -1,14 +1,22 @@
-const express = require('express');
-const cors = require('cors');
-const {Client} = require("@googlemaps/google-maps-services-js");
+const express = require("express");
+const cors = require("cors");
+const { Client } = require("@googlemaps/google-maps-services-js");
+const selectRoute = require("./routes/select");
+const versusRoute = require("./routes/versus");
 
-require('dotenv').config();
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
 const API_KEY = process.env.API_KEY;
 
 app.use(cors());
+
+app.use(express.static("public"));
+
+app.use("/select", selectRoute);
+
+app.use("/versus", versusRoute);
 
 const client = new Client({});
 
@@ -27,5 +35,8 @@ const client = new Client({});
 //     })
 
 app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}` || `Server is listening on port 5050`);
-})
+	console.log(
+		`Server is listening on port ${PORT}` ||
+			`Server is listening on port 5050`
+	);
+});

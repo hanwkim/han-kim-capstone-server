@@ -1,0 +1,64 @@
+[
+	[
+		{
+			"id": "1",
+			"name": "Burger",
+			"image": "http://localhost:8080/images/burger_large.png"
+		},
+		{
+			"id": "2",
+			"name": "Shawarma",
+			"image": "http://localhost:8080/images/shawarma_large.png"
+		},
+		{
+			"id": "3",
+			"name": "Pasta",
+			"image": "http://localhost:8080/images/pasta_large.png"
+		},
+		{
+			"id": "4",
+			"name": "Soup Noodles",
+			"image": "http://localhost:8080/images/soupnoodles_large.png"
+		},
+		{
+			"id": "5",
+			"name": "Curry",
+			"image": "http://localhost:8080/images/curry_large.png"
+		},
+		{
+			"id": "6",
+			"name": "Breakfast",
+			"image": "http://localhost:8080/images/breakfast_large.png"
+		},
+		{
+			"id": "7",
+			"name": "Fried Chicken",
+			"image": "http://localhost:8080/images/friedchicken_large.png"
+		},
+		{
+			"id": "8",
+			"name": "Dumplings",
+			"image": "http://localhost:8080/images/dumplings_large.png"
+		},
+		{
+			"id": "9",
+			"name": "Pizza",
+			"image": "http://localhost:8080/images/pizza_large.png"
+		},
+		{
+			"id": "10",
+			"name": "Sandwich",
+			"image": "http://localhost:8080/images/sandwich_large.png"
+		},
+		{
+			"id": "11",
+			"name": "Sushi",
+			"image": "http://localhost:8080/images/sushi_large.png"
+		},
+		{
+			"id": "12",
+			"name": "Taco",
+			"image": "http://localhost:8080/images/taco_large.png"
+		}
+	]
+]
