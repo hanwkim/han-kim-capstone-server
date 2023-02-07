@@ -3,6 +3,8 @@ const cors = require("cors");
 const { Client } = require("@googlemaps/google-maps-services-js");
 const selectRoute = require("./routes/select");
 const versusRoute = require("./routes/versus");
+const resultsRoute = require("./routes/results");
+const detailsRoute = require("./routes/details");
 
 require("dotenv").config();
 
@@ -18,12 +20,17 @@ app.use("/select", selectRoute);
 
 app.use("/versus", versusRoute);
 
+app.use("/results", resultsRoute);
+
+app.use("/details", detailsRoute);
+
 const client = new Client({});
 
 // client
 //     .textSearch({
 //         params: {
 //             query: "pizza in toronto",
+// 			radius: 5000,
 //             key: API_KEY
 //         }
 //     })
