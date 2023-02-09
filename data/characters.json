@@ -60,5 +60,57 @@
 			"name": "Taco",
 			"image": "http://localhost:8080/images/taco_large.png"
 		}
+	],
+	[
+		{
+			"id": "13",
+			"name": "Cake",
+			"image": "http://localhost:8080/images/cake_large.png"
+		},
+		{
+			"id": "14",
+			"name": "Cookies",
+			"image": "http://localhost:8080/images/cookies_large.png"
+		},
+		{
+			"id": "15",
+			"name": "Waffles",
+			"image": "http://localhost:8080/images/waffles_large.png"
+		},
+		{
+			"id": "16",
+			"name": "Chocolate",
+			"image": "http://localhost:8080/images/chocolate_large.png"
+		},
+		{
+			"id": "17",
+			"name": "Cheesecake",
+			"image": "http://localhost:8080/images/cheesecake_large.png"
+		},
+		{
+			"id": "18",
+			"name": "Bubble Tea",
+			"image": "http://localhost:8080/images/boba_large.png"
+		},
+		{
+			"id": "19",
+			"name": "Ice Cream",
+			"image": "http://localhost:8080/images/icecream_large.png"
+		},
+		{
+			"id": "20",
+			"name": "Pancakes",
+			"image": "http://localhost:8080/images/pancakes_large.png"
+		},
+		{
+			"id": "21",
+			"name": "Pie",
+			"image": "http://localhost:8080/images/pie_large.png"
+		},
+		{
+			"id": "22",
+			"name": "Donuts",
+			"image": "http://localhost:8080/images/donuts_large.png"
+		}
 	]
 ]

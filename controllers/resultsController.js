@@ -8,9 +8,17 @@ const API_KEY = process.env.API_KEY;
 const characterList = JSON.parse(fs.readFileSync("./data/characters.json"));
 
 const getResults = (req, res) => {
-	const winningFood = characterList[0].find(
-		(character) => character.name === req.query.winner
-	);
+	let winningFood = {};
+
+	if (req.query.type === "savory") {
+		winningFood = characterList[0].find(
+			(character) => character.name === req.query.winner
+		);
+	} else {
+		winningFood = characterList[1].find(
+			(character) => character.name === req.query.winner
+		);
+	}
 
 	if (req.query.city === "current") {
 		client

@@ -5,7 +5,12 @@ const fs = require("node:fs");
 const characterList = JSON.parse(fs.readFileSync("./data/characters.json"));
 
 router.get("/", (req, res) => {
-	res.json(characterList[0]);
+	if (req.query.type === "savory") {
+		res.json(characterList[0]);
+	} else {
+		res.json(characterList[1]);
+	}
+	
 });
 
 module.exports = router;
