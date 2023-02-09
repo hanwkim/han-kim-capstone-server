@@ -11,5 +11,13 @@ router
     .route("/")
     .get(resultsController.getResults);
 
+router
+    .route("/filtered/current-location")
+    .get(resultsController.getFilteredResultsCurrent);
+
+router
+    .route("/filtered/city-location")
+    .get(resultsController.getFilteredResultsCity);
+
 
 module.exports = router;
