@@ -26,7 +26,7 @@ const getResults = (req, res) => {
 				params: {
 					query: req.query.winner,
 					location: req.query.location,
-					radius: 5000,
+					radius: 15000,
 					key: API_KEY,
 				},
 			})
@@ -41,7 +41,7 @@ const getResults = (req, res) => {
 		.textSearch({
 			params: {
 				query: `${req.query.winner} in ${req.query.city}`,
-				radius: 5000,
+				radius: 15000,
 				key: API_KEY,
 			},
 		})
@@ -55,13 +55,13 @@ const getResults = (req, res) => {
 };
 
 const getFilteredResultsCurrent = (req, res) => {
-	if (!req.query.price) {
+	if (req.query.price === '0') {
 		client
 			.textSearch({
 				params: {
 					query: req.query.winner,
 					location: req.query.location,
-					radius: 5000,
+					radius: 15000,
 					key: API_KEY,
 					opennow: true,
 				},
@@ -73,13 +73,13 @@ const getFilteredResultsCurrent = (req, res) => {
 				res.status(404).send("Unable to find listings");
 			});
 
-	} else if (!req.query.openNow) {
+	} else if (req.query.openNow === 'false') {
 		client
 		.textSearch({
 			params: {
 				query: req.query.winner,
 				location: req.query.location,
-				radius: 5000,
+				radius: 15000,
 				key: API_KEY,
 				maxprice: req.query.price,
 			},
@@ -90,14 +90,13 @@ const getFilteredResultsCurrent = (req, res) => {
 		.catch((error) => {
 			res.status(404).send("Unable to find listings");
 		});
-
-	} else {
+	} else {	
 		client
 		.textSearch({
 			params: {
 				query: req.query.winner,
 				location: req.query.location,
-				radius: 5000,
+				radius: 15000,
 				key: API_KEY,
 				opennow: true,
 				maxprice: req.query.price,
@@ -113,12 +112,12 @@ const getFilteredResultsCurrent = (req, res) => {
 };
 
 const getFilteredResultsCity = (req, res) => {
-	if (!req.query.price) {
+	if (req.query.price === '0') {
 		client
 		.textSearch({
 			params: {
 				query: `${req.query.winner} in ${req.query.city}`,
-				radius: 5000,
+				radius: 15000,
 				key: API_KEY,
 				opennow: true,
 			},
@@ -129,12 +128,12 @@ const getFilteredResultsCity = (req, res) => {
 		.catch((error) => {
 			res.status(404).send("Unable to find listings");
 		});
-	} else if (!req.query.openNow) {
+	} else if (req.query.openNow === 'false') {
 		client
 		.textSearch({
 			params: {
 				query: `${req.query.winner} in ${req.query.city}`,
-				radius: 5000,
+				radius: 15000,
 				key: API_KEY,
 				maxprice: req.query.price,
 			},
@@ -150,7 +149,7 @@ const getFilteredResultsCity = (req, res) => {
 		.textSearch({
 			params: {
 				query: `${req.query.winner} in ${req.query.city}`,
-				radius: 5000,
+				radius: 15000,
 				key: API_KEY,
 				maxprice: req.query.price,
 				opennow: true,

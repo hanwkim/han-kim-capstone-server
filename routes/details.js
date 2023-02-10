@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
         .placeDetails({
             params: {
                 place_id: req.query.id,
-                fields: "name,opening_hours,website,reviews",
+                fields: "name,opening_hours,reviews,price_level,editorial_summary",
                 key: API_KEY,
             },
         })
