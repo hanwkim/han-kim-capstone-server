@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const selectRoute = require("./routes/select");
 const versusRoute = require("./routes/versus");
 const resultsRoute = require("./routes/results");
@@ -8,6 +9,8 @@ require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
+
+app.use(cors());
 
 app.use(express.static("public"));
 

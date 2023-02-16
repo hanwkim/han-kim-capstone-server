@@ -24,7 +24,7 @@ $ npm install
 ```$ npm install``` above should take care of installing what is needed, but just in case something goes wrong, the other dependencies that are being used can be installed with this command:
 
 ```bash
-$ npm i express dotenv @googlemaps/google-maps-services-js
+$ npm i express cors dotenv @googlemaps/google-maps-services-js
 ```
 
 ## Environment Variables
@@ -53,6 +53,14 @@ Enter this command, and you're good to go for the server side!
 ```
 $ npm run start
 ```
+
+## Tech Stacks/Libraries Used
+
+ - [node.js](https://nodejs.org/)
+ - [express](https://expressjs.com/)
+ - [Node.js Client for Google Maps Services](https://github.com/googlemaps/google-maps-services-js)
+ - [dotenv](https://github.com/motdotla/dotenv)
+ - [cors](https://github.com/expressjs/cors)
 
 ## Lessons Learned and Roadmap
 
